@@ -4,9 +4,35 @@ body, html {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 812px) {
   .specifyFilters {
     display: none !important;
+  }
+
+  .overlayer {
+    display: none !important;
+  }
+
+  .searchBarBoxFiltered {
+    padding: 5% 0 !important;
+  }
+
+  .headerBox {
+    position: static !important;
+    padding-top: 10% !important;
+    transform: scale(0.8) !important;
+  }
+
+  .menu {
+    padding: 1% 0 !important;
+  }
+  .menu .logo {
+    transform: scale(0.8);
+  }
+
+  .App, .wrapper {
+    min-height: 100% !important;
+    height: auto !important;
   }
 }
 @media (max-width: 1024px) {
@@ -124,7 +150,6 @@ body, html {
   z-index: 99999;
   top: 10%;
   width: 100%;
-  background: b;
   color: #fff;
   font-size: 42px;
 }
@@ -204,12 +229,17 @@ body, html {
 }
 
 .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Londrina;
   position: absolute;
   top: 0;
   z-index: 999;
   width: 100%;
-  height: 10%;
+  min-height: 10%;
+  height: auto;
+  padding: 0.1% 0;
   background: #339966;
 }
 .menu ul {

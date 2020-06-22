@@ -133,8 +133,10 @@ class App extends React.Component{
 
   renderShows(){
     let shows = [];
+    let id = 0;
+
     this.state.shows.forEach(vid => {
-      shows.push(<MovieBox movie={vid}/>)
+      shows.push(<MovieBox movie={vid} key={id++}/>)
     });
 
     return shows;
@@ -162,7 +164,7 @@ class App extends React.Component{
   render(){
     return (
     <div className={this.state.appClassName}>
-       <Navigation filt={this.filterOn} searchedFlag={this.state.searched}/>
+       <Navigation filt={this.filterOn} searchedFlag={this.state.searched} off={this.state.specifiedSearch}/>
        { this.state.searched ? <SearchBarBox search={this.state.searchTerm} get={this.handleBtn} update={this.updateSearchTerm}/> : null}
        {
           this.renderContent()

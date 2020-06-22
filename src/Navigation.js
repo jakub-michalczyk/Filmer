@@ -26,10 +26,10 @@ class Navigation extends React.Component{
     <nav className={`menu${this.props.searchedFlag ? " staticPos" : ""}`}>
       <ul>
           <li className="logo"><img src={icon} alt="Logo"/>filmer.<span>io</span></li>
-          <li className="specifyFilters" onClick={this.props.filt} onMouseOver={this.changeIcon} onMouseOut={this.changeIcon}>
+          {this.props.off === null ? <li className="specifyFilters" onClick={this.props.filt} onMouseOver={this.changeIcon} onMouseOut={this.changeIcon}>
             <img src={this.state.imgSrc} alt="Filter icon"/>
              Show's episodes
-          </li>
+          </li> : null}
       </ul>
     </nav> 
     )

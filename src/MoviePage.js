@@ -49,19 +49,6 @@ class MoviePage extends React.Component{
 
   }
 
-  generateHeaders(){
-    if (this.state.seasons.length !== 0 && this.state.episodes.length !== 0) {
-        let counter = 0;
-        let box = [];
-
-        this.state.seasons.forEach(season => {
-            box.push(<div className="seasonHeader">Season {counter++}</div>)
-        });
-
-        return box;
-    }
-  }
-
   generateList(){
     if (this.state.seasons.length !== 0 && this.state.episodes.length !== 0) {
         let listBox = [];
